@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  /* background-color: #282c34; */
+
+}
+
+body {
+  /* background-color: #FFF; */
+  color: #FFF;
+
+}
+.app {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  margin-top: 20px;
+}
+.container {
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  width: 400px;
+  padding: 30px 40px;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+h1, h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.entireData-items {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  display: grid;
+}
+.entireData-items {
+  list-style: none;
+  display: block;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-align: center;
+  align-items: stretch;
+
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  -webkit-box-shadow: 2px 2px 10px -4px rgba(255,255,255,1);
+  -moz-box-shadow: 2px 2px 10px -4px rgba(255,255,255,1);
+  box-shadow: 2px 2px 5px -4px rgba(255,255,255,1);
+}
+.global-item {
+  display: inline-block;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 20px;
+}
