@@ -27,15 +27,15 @@ class App extends Component {
               <h3><strong>{el.countryRegion}, {el.provinceState}:</strong></h3>
               <div className="global-item">
                 <p style={{"color": "orange", "fontWeight":"bold"}}> {el.confirmed} </p>
-                <label>مؤكد</label>
+                <label  style={{"color": "orange"}}>مؤكد</label>
               </div>
               <div className="global-item">
                 <p style={{"color": "green", "fontWeight":"bold"}}> {el.recovered}</p>
-                <label>متعافي</label>
+                <label style={{"color": "green"}}>متعافي</label>
               </div>
               <div className="global-item">
                 <p style={{"color": "red", "fontWeight":"bold"}}> {el.deaths}</p>
-                <label>وفاة</label>
+                <label style={{"color": "red"}}>وفاة</label>
               </div>
           </div>
         )
@@ -45,16 +45,16 @@ class App extends Component {
                 <h3><strong>{el.countryRegion}</strong></h3>
                 <div className="global-item">
                   <p style={{"color": "orange", "fontWeight":"bold"}}> {el.confirmed} </p>
-                  <label>مؤكد</label>
+                  <label  style={{"color": "orange"}}>مؤكد</label>
                 </div>
                 <div className="global-item">
                   <p style={{"color": "green", "fontWeight":"bold"}}> {el.recovered}</p>
-                  <label>متعافي</label>
+                  <label style={{"color": "green"}}>متعافي</label>
                 </div>
 
                 <div className="global-item">
                   <p style={{"color": "red", "fontWeight":"bold"}}> {el.deaths}</p>
-                  <label>وفاة</label>
+                  <label style={{"color": "red"}}>وفاة</label>
                 </div>
             </div>
           )
