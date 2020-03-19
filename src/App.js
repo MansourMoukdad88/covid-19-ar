@@ -5,6 +5,8 @@ import Jo from "./Jo";
 import Kw from "./Kw";
 import UAE from "./UAE"
 import KSA from "./KSA"
+import EG from "./EG"
+
 
 class App extends Component {
   
@@ -76,6 +78,7 @@ class App extends Component {
           <Kw/>
           <UAE/>
           <KSA/>
+          <EG/>
           <h1>تفاصيل كل دولة</h1>
           <div className="dataContainer" >{this.state.data}</div>
           <h5 style={{"fontSize": "12px", "textAlign":"center"}}>Made by <a href="http://codings.io">codings.io</a>@ 2020</h5>
