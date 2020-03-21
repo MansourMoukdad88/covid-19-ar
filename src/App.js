@@ -68,11 +68,17 @@ class App extends Component {
 
 
   render() {
+    var today = new Date().toLocaleDateString('en-GB', {
+      day : 'numeric',
+      month : 'short',
+      year : 'numeric'
+      }).split(' ').join('-');
     return (
       <div className="app">
         <div className="container">
-          <h1>Covid-19  --  كورونا</h1>
-          <h5 style={{"fontSize": "8px", "textAlign":"center"}}>Made by <a href="http://codings.io">codings.io</a></h5>
+          <h1>Covid-19  |  كورونا</h1>
+          <div style={{"textAlign":"center","margin":"10px", "backgroundColor":"#5B86E5", "width": "100px", "borderRadius":"3px"}}>{today}</div>
+          <h5 style={{"fontSize": "8px", "textAlign":"left", "marginLeft":"10px"}}>Made by <a href="http://codings.io">codings.io</a></h5>
           <br></br>
           <Global/>
           <Jo/>
