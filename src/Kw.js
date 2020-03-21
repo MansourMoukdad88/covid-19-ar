@@ -12,14 +12,17 @@ class Kw extends Component {
       let globalConfirmed = data.confirmed.value;
       let globalRecovered = data.recovered.value;
       let globalDeaths = data.deaths.value;
-      let global = [globalConfirmed, globalRecovered, globalDeaths];
-      this.setState({ global:global })
+      let update = data.lastUpdate;
+      
+      let global = [globalConfirmed, globalRecovered, globalDeaths, update];
+            this.setState({ global:global })
     });
   }
 
   render() {
     let som = this.state
-   
+    let update = som.global[3]
+
     return (
       <div className="entireData-items">
         <h2>الكويت</h2>
@@ -37,6 +40,7 @@ class Kw extends Component {
         </div>
         <br></br>
         <br></br>
+        <div style={{"fontSize":"10px", "color":"white"}}>{ update && (<div>Updated: {new Date(update).toLocaleString()}</div>)}</div>
 
       </div>
     )

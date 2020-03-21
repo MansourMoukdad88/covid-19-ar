@@ -43,6 +43,7 @@ class App extends Component {
           return (
             <div className="entireData-items" key={index}>            
                 <h3><strong>{el.countryRegion}</strong></h3>
+                <br></br>
                 <div className="global-item">
                   <p style={{"color": "orange", "fontWeight":"bold"}}> {el.confirmed} </p>
                   <label  style={{"color": "orange"}}>مؤكد</label>

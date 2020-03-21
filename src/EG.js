@@ -9,19 +9,21 @@ class EG extends Component {
     fetch("https://covid19.mathdro.id/api/countries/egypt")
     .then(response => response.json())
     .then(data => {      
-      console.log("UAE", data);
+      // console.log("UAE", data);
       
       let globalConfirmed = data.confirmed.value;
       let globalRecovered = data.recovered.value;
       let globalDeaths = data.deaths.value;
-      let global = [globalConfirmed, globalRecovered, globalDeaths];
-      this.setState({ global:global })
+      let update = data.lastUpdate;
+      
+      let global = [globalConfirmed, globalRecovered, globalDeaths, update];      this.setState({ global:global })
     });
   }
 
   render() {
     let som = this.state
-   
+    let update = som.global[3]
+
     return (
       <div className="entireData-items">
         <h2>مصر</h2>
@@ -40,6 +42,7 @@ class EG extends Component {
 
         <br></br>
         <br></br>
+        <div style={{"fontSize":"10px", "color":"white"}}>{ update && (<div>Updated: {new Date(update).toLocaleString()}</div>)}</div>
 
       </div>
     )
