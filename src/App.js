@@ -6,7 +6,7 @@ import Kw from "./Kw";
 import UAE from "./UAE"
 import KSA from "./KSA"
 import EG from "./EG"
-
+import LB from "./LB"
 
 class App extends Component {
   
@@ -85,6 +85,7 @@ class App extends Component {
           <Kw/>
           <UAE/>
           <KSA/>
+          <LB/>
           <EG/>
           <h1>تفاصيل كل دولة</h1>
           <div className="dataContainer" >{this.state.data}</div>
