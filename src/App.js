@@ -7,6 +7,7 @@ import UAE from "./UAE"
 import KSA from "./KSA"
 import EG from "./EG"
 import LB from "./LB"
+import Search from "./components/Search";
 
 class App extends Component {
   
@@ -18,7 +19,7 @@ class App extends Component {
     fetch("https://covid19.mathdro.id/api/countries/[country]/confirmed")
     .then(response => response.json())
     .then(data => {
-      console.log("App", data);
+      // console.log("App", data);
       
       let entireData = data.map((el, index) => {
         if(el.provinceState !== null ) {
@@ -76,10 +77,10 @@ class App extends Component {
     return (
       <div className="app">
         <div className="container">
-          <h1>Covid-19  |  كورونا</h1>
+          <h1>Covid-19  |  Corona</h1>
           <div style={{"textAlign":"center","margin":"10px", "backgroundColor":"#5B86E5", "width": "100px", "borderRadius":"3px"}}>{today}</div>
           <h5 style={{"fontSize": "8px", "textAlign":"left", "marginLeft":"10px"}}>Made by <a href="http://codings.io">codings.io</a></h5>
-          <br></br>
+          <Search/>
           <Global/>
           <Jo/>
           <Kw/>
@@ -87,11 +88,12 @@ class App extends Component {
           <KSA/>
           <LB/>
           <EG/>
-          <h1>تفاصيل كل دولة</h1>
-          <div className="dataContainer" >{this.state.data}</div>
+          {/* <h1>تفاصيل كل دولة</h1> */}
+          {/* <div className="dataContainer" >{this.state.data}</div> */}
+          <br></br>
           <h5 style={{"fontSize": "12px", "textAlign":"center"}}>Made by <a href="http://codings.io">codings.io</a>@ 2020</h5>
           <br></br>
-          <p style={{"fontSize": "8px", "textAlign":"center"}}> Api by <a href="http://https://github.com/mathdroid/covid-19-api">mathdroid</a> </p>
+          <p style={{"fontSize": "8px", "textAlign":"right"}}> Api by <a href="http://https://github.com/mathdroid/covid-19-api">mathdroid</a> </p>
         </div>
       </div>
      
@@ -100,26 +102,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-              // provinceState: "Hubei"
-              // countryRegion: "China"
-              // lastUpdate: 1584504796000
-              // lat: 30.9756403482891
-              // long: 112.270692167452
-              // confirmed: 67800
-              // recovered: 56886
-              // deaths: 3122
-              // active: 7792
-              // admin2: null
-              // fips: null
-              // combinedKey: null
-              // iso2: "CN"
-              // iso3: "CHN"
-  //       console.log("Country Name:...", countryName)
-        // console.log("Confirmed:...", confirmed)
-
-  //     })
-  //   })
-  // }

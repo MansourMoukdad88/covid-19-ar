@@ -25,18 +25,18 @@ class Kw extends Component {
 
     return (
       <div className="entireData-items">
-        <h2>الكويت</h2>
+        <h1>Kuwait</h1>
         <div className="global-item">
-          <p style={{"color": "orange", "fontWeight":"bold"}}> {som.global[0]} </p>
-          <label  style={{"color": "orange"}}>مؤكد</label>
+          <p style={{"color": "orange", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[0]} </p>
+          <label  style={{"color": "orange", "fontSize":"16px", "fontWeight":"bold",}}>confirmed</label>
         </div>
         <div className="global-item">
-          <p style={{"color": "green", "fontWeight":"bold"}}> {som.global[1]}</p>
-          <label style={{"color": "green"}}>متعافي</label>
+          <p style={{"color": "green", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[1]}</p>
+          <label style={{"color": "green", "fontSize":"16px", "fontWeight":"bold",}}>recovered</label>
         </div>
         <div className="global-item">
-          <p style={{"color": "red", "fontWeight":"bold"}}> {som.global[2]}</p>
-          <label style={{"color": "red"}}>وفاة</label>
+          <p style={{"color": "red", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[2]}</p>
+          <label style={{"color": "red", "fontSize":"16px", "fontWeight":"bold",}}>deaths</label>
         </div>
         <br></br>
         <br></br>
