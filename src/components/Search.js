@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import '../App.css';
+import {Confirmed, ConfirmedLabel, Recovered, RecoveredLabel, Deaths, DeathsLabel, DivUpdate} from '../styled'
 
 class Search extends Component {
 
@@ -50,20 +51,9 @@ class Search extends Component {
     });
   };
 
-  // HandleSubmit
-  handleSubmit(event) {
-    alert('Your favorite flavor is: ' + this.state.value);
-    event.preventDefault();
-    console.log("Submitted");
-  }
-
-
 // Render function 
   render() {
-    const { names, values, confirmed, recovered, deaths, test, currentCountry, lastUpdate } = this.state;
-    for (let key in test) {
-      let value = test[key];
-    }      
+    const { names, confirmed, recovered, deaths, currentCountry, lastUpdate } = this.state;
     const renderName = names.map((el,index) => { 
       return(
         <Fragment key={index}>
@@ -74,31 +64,29 @@ class Search extends Component {
 
   return (
     <div>
-      <form onSubmit={this.handleSubmit}>
         <label className="search-form">
           <select className="select-item" value={currentCountry} onChange={this.handleChange}>
             {renderName}
           </select>
         </label>
-      </form>
       <div>
       {recovered === null ? "" : (
       <div className="entireData-items">
         <h1>{currentCountry}</h1>
         <div className="global-item">
-          <p style={{"color": "orange", "fontWeight":"bold", "fontSize":"30px"}}> {confirmed} </p>
-          <label  style={{"color": "orange", "fontSize":"16px", "fontWeight":"bold"}}>confirmed</label>
+          <Confirmed> {confirmed} </Confirmed>
+          <ConfirmedLabel>confirmed</ConfirmedLabel>
         </div>
         <div className="global-item">
-          <p style={{"color": "green", "fontWeight":"bold", "fontSize":"30px"}}> {recovered}</p>
-          <label style={{"color": "green", "fontSize":"16px", "fontWeight":"bold"}}>recovered</label>
+          <Recovered> {recovered}</Recovered>
+          <RecoveredLabel>recovered</RecoveredLabel>
         </div>
         <div className="global-item">
-          <p style={{"color": "red", "fontWeight":"bold", "fontSize":"30px"}}> {deaths}</p>
-          <label style={{"color": "red", "fontSize":"16px", "fontWeight":"bold"}}>deaths</label>
+          <Deaths> {deaths}</Deaths>
+          <DeathsLabel>deaths</DeathsLabel>
         </div>
         <br></br> <br></br>
-        <div style={{"fontSize":"10px", "color":"white"}}>{ lastUpdate && (<div>Updated: {new Date(lastUpdate).toLocaleString()}</div>)}</div>
+        <DivUpdate>{ lastUpdate && (<div>Updated: {new Date(lastUpdate).toLocaleString()}</div>)}</DivUpdate>
       </div>
       )}
       </div>

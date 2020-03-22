@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Confirmed, ConfirmedLabel, Recovered, RecoveredLabel, Deaths, DeathsLabel, DivUpdate} from './styled'
 
 class Kw extends Component {
   state = {
@@ -6,7 +7,7 @@ class Kw extends Component {
   };
 
   componentDidMount(){
-    fetch("https://covid19.mathdro.id/api/countries/Kuwait")
+    fetch("https://covid19.mathdro.id/api/countries/kuwait")
     .then(response => response.json())
     .then(data => {      
       let globalConfirmed = data.confirmed.value;
@@ -19,28 +20,27 @@ class Kw extends Component {
   }
 
   render() {
-    let som = this.state
-    let update = som.global[3]
-
+    let som = this.state;
+    let renderState = som.global;
+    let update = som.global[3];
+    let toUpdate = (update && (<div>Updated: {new Date(update).toLocaleString()}</div>))
     return (
       <div className="entireData-items">
-        <h1>Kuwait</h1>
+        <h1> kuwait</h1>
         <div className="global-item">
-          <p style={{"color": "orange", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[0]} </p>
-          <label  style={{"color": "orange", "fontSize":"16px", "fontWeight":"bold",}}>confirmed</label>
+          <Confirmed> {renderState[0]} </Confirmed>
+          <ConfirmedLabel>confirmed</ConfirmedLabel>
         </div>
         <div className="global-item">
-          <p style={{"color": "green", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[1]}</p>
-          <label style={{"color": "green", "fontSize":"16px", "fontWeight":"bold",}}>recovered</label>
+          <Recovered> {renderState[1]}</Recovered>
+          <RecoveredLabel>recovered</RecoveredLabel>
         </div>
         <div className="global-item">
-          <p style={{"color": "red", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[2]}</p>
-          <label style={{"color": "red", "fontSize":"16px", "fontWeight":"bold",}}>deaths</label>
+          <Deaths> {renderState[2]}</Deaths>
+          <DeathsLabel>deaths</DeathsLabel>
         </div>
-        <br></br>
-        <br></br>
-        <div style={{"fontSize":"10px", "color":"white"}}>{ update && (<div>Updated: {new Date(update).toLocaleString()}</div>)}</div>
-
+          <br></br><br></br>
+        <DivUpdate>{toUpdate}</DivUpdate>
       </div>
     )
   }
