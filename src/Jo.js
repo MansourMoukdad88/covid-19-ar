@@ -9,13 +9,10 @@ class Jo extends Component {
     fetch("https://covid19.mathdro.id/api/countries/Jordan")
     .then(response => response.json())
     .then(data => {      
-      console.log("JOR", data);
-      
       let globalConfirmed = data.confirmed.value;
       let globalRecovered = data.recovered.value;
       let globalDeaths = data.deaths.value;
       let update = data.lastUpdate;
-      
       let global = [globalConfirmed, globalRecovered, globalDeaths, update];
       this.setState({ global:global })
     });
@@ -39,11 +36,8 @@ class Jo extends Component {
           <p style={{"color": "red", "fontWeight":"bold", "fontSize":"30px"}}> {som.global[2]}</p>
           <label style={{"color": "red", "fontSize":"16px", "fontWeight":"bold",}}>deaths</label>
         </div>
-
-        <br></br>
-        <br></br>
+        <br></br><br></br>
         <div style={{"fontSize":"10px", "color":"white"}}>{ update && (<div>Updated: {new Date(update).toLocaleString()}</div>)}</div>
-
       </div>
     )
   }

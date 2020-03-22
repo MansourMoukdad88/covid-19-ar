@@ -13,9 +13,8 @@ class Kw extends Component {
       let globalRecovered = data.recovered.value;
       let globalDeaths = data.deaths.value;
       let update = data.lastUpdate;
-      
       let global = [globalConfirmed, globalRecovered, globalDeaths, update];
-            this.setState({ global:global })
+      this.setState({ global:global })
     });
   }
 

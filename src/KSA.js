@@ -9,13 +9,10 @@ class KSA extends Component {
     fetch("https://covid19.mathdro.id/api/countries/sa")
     .then(response => response.json())
     .then(data => {      
-      // console.log("UAE", data);
-      
       let globalConfirmed = data.confirmed.value;
       let globalRecovered = data.recovered.value;
       let globalDeaths = data.deaths.value;
       let update = data.lastUpdate;
-      
       let global = [globalConfirmed, globalRecovered, globalDeaths, update];      this.setState({ global:global })
     });
   }
