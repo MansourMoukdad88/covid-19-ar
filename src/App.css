@@ -11,7 +11,7 @@ h1.App-logo {
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 3s linear;
   }
 }
 
@@ -64,7 +64,7 @@ body {
   
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   width: 430px;
-  padding: 10px 40px 30px 40px;
+  padding: 3px 40px 30px 40px;
   grid-template-columns: repeat(3, 1fr);
 }
 h1, h2 {
@@ -72,11 +72,12 @@ h1, h2 {
   margin: 0 0 20px;
 }
 .app-heading {
-  margin: 20px 0 20px;
+  margin: 40px 0 20px;
 }
 .instruction {
   background-color: rgba(216, 48, 34);
   padding: 3px 0;
+  float: left;
 }
 h1 {
   font-family: 'Prompt';
@@ -168,6 +169,9 @@ h1 {
 }
 
 /* News */
+a.news {
+  margin-left: 0 !important;
+}
 .news {
   text-decoration: none;
   color: #FFF;

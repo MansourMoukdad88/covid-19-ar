@@ -35,5 +35,6 @@ export const Label = styled.label`
 // Div
 export const DivUpdate = styled.div`
   font-size: 10px;
+  font-wight:bold;
   color: white;
 `
