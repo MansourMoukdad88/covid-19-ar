@@ -9,7 +9,6 @@ class Search extends Component {
       confirmed: null,
       recovered:null,
       deaths:null,
-      test:{},
       currentCountry: "",
       lastUpdate:""
     };
@@ -19,18 +18,11 @@ class Search extends Component {
     fetch(`https://covid19.mathdro.id/api/countries/`)
     .then(response => response.json())
     .then(data => {
-      this.setState({test: data.countries})
-      let iso3Array = [];
-      let iso3 = Object.keys(data.iso3);
-      iso3.map(key => {
-        iso3Array.push(key);
-      });
-      let namesOfCountries = Object.keys(data.countries);
-      let optionsArray = [];
-      namesOfCountries.map(key => {
-        optionsArray.push(key);
-      });
-      this.setState({names: optionsArray, value:iso3Array});
+      let arrayOfNames = [];
+      data.countries.map((country) => {
+        arrayOfNames.push(country.name);
+      })
+      this.setState({ names:arrayOfNames});
     });
   }
 

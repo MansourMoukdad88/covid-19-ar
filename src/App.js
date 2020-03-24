@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
 import Global from "./Global";
 import Jo from "./Jo";
 import Kw from "./Kw";
-import UAE from "./UAE"
-import KSA from "./KSA"
-import EG from "./EG"
-import LB from "./LB"
+import UAE from "./UAE";
+import KSA from "./KSA";
+import EG from "./EG";
+import LB from "./LB";
+import Sy from "./Sy";
 import Search from "./components/Search";
 
 class App extends Component {
@@ -21,13 +23,14 @@ class App extends Component {
     return (
       <div className="app">
         <div className="container">
-          <h1>Covid-19  |  Corona</h1>
+          <h1>Covid-19  <img src={logo} className="App-logo" alt="logo" />  Corona</h1>
           <div style={{"textAlign":"center","margin":"10px", "backgroundColor":"#5B86E5", "width": "100px", "borderRadius":"3px"}}>{today}</div>
           <h5 style={{"fontSize": "8px", "textAlign":"left", "marginLeft":"10px"}}>Made by <a href="http://codings.io">codings.io</a></h5>
           <Search/>
           <Global/>
           <Jo/>
           <Kw/>
+          <Sy/>
           <UAE/>
           <KSA/>
           <LB/>
