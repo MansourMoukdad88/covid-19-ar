@@ -64,12 +64,19 @@ body {
   
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   width: 430px;
-  padding: 30px 40px;
+  padding: 10px 40px 30px 40px;
   grid-template-columns: repeat(3, 1fr);
 }
 h1, h2 {
   text-align: center;
   margin: 0 0 20px;
+}
+.app-heading {
+  margin: 20px 0 20px;
+}
+.instruction {
+  background-color: rgba(216, 48, 34);
+  padding: 3px 0;
 }
 h1 {
   font-family: 'Prompt';
@@ -124,4 +131,44 @@ h1 {
 
   text-align-last:center;
   padding-right: 30px !important;
+}
+
+
+/*  Ticker  */
+@keyframes ticker {
+  100% { transform: translate3d(0, 0, 0); }
+  0% { transform: translate3d(-100%, 0, 0); }
+}
+.tcontainer{
+  width: 100%;
+  overflow: hidden;
+}
+.ticker-wrap {
+  width: 100%;
+  padding-left: 100%;
+  background-color: rgba(216, 48, 34);
+}
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-delay: 1s;
+  animation-duration: 100s;
+}
+.ticker-move:hover{
+  animation-play-state: paused;
+}
+.ticker-item{
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+/* News */
+.news {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
 }
