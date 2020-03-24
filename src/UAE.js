@@ -26,7 +26,7 @@ class UAE extends Component {
     let toUpdate = (update && (<div>Updated: {new Date(update).toLocaleString()}</div>))
     return (
       <div className="entireData-items">
-        <h1> Emeries UAE</h1>
+        <h1> Emiraties UAE</h1>
         <div className="global-item">
           <Confirmed> {renderState[0]} </Confirmed>
           <ConfirmedLabel>confirmed</ConfirmedLabel>
