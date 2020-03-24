@@ -11,7 +11,6 @@ export default class InstructionTicker extends Component {
     fetch("http://newsapi.org/v2/top-headlines?country=ae&category=health&apiKey=f869bbb8172a4c53b25182b5fed0ca61")
     .then(response => response.json())
     .then(data => {
-      console.log(data.articles);
       let articleTitle = [];
       let articleURL =[]
       let articles = data.articles.forEach((article) => {
@@ -19,21 +18,16 @@ export default class InstructionTicker extends Component {
           let title = "| " + article.title + " |"
           let url = article.url + " ";
 
-          // console.log(`<a href=${article.url}>article.title</a>`);
           articleTitle.push(title);
           articleURL.push(url);
         } 
         this.setState({title:articleTitle, url:articleURL})
-        console.log("State",this.state);
       })      
     })
   }
 
   render() {
     let {title, url} = this.state;
-console.log("render title", title);
-console.log("render url", url);
-
     return (
       <div className="tcontainer">
         <div className="ticker-wrap">
