@@ -13,8 +13,8 @@ export const Recovered = styled.p`
   font-size: 30px;
 `
 export const Deaths = styled.p`
-  color: red;
-  font-weight: bold;
+color: rgba(216, 48, 34);
+font-weight: bold;
   font-size: 30px;
 `
 
@@ -26,7 +26,7 @@ export const RecoveredLabel = styled.label`
   color: green;
 `
 export const DeathsLabel = styled.label`
-  color: red;
+color: rgba(216, 48, 34);
 `
 export const Label = styled.label`
   font-size:16px;
@@ -34,7 +34,7 @@ export const Label = styled.label`
 `
 // Div
 export const DivUpdate = styled.div`
-  font-size: 10px;
+  font-size: 12px;
   font-wight:bold;
   color: white;
 `

@@ -23,24 +23,24 @@ class EG extends Component {
     let som = this.state;
     let renderState = som.global;
     let update = som.global[3];
-    let toUpdate = (update && (<div>Updated: {new Date(update).toLocaleString()}</div>))
+    let toUpdate = (update && (<div> {new Date(update).toLocaleString()}</div>))
     return (
       <div className="entireData-items">
-        <h1>Egypt</h1>
+        <h1>مصر</h1>
         <div className="global-item">
           <Confirmed> {renderState[0]} </Confirmed>
-          <ConfirmedLabel>confirmed</ConfirmedLabel>
+          <ConfirmedLabel>المصابون</ConfirmedLabel>
         </div>
         <div className="global-item">
           <Recovered> {renderState[1]}</Recovered>
-          <RecoveredLabel>recovered</RecoveredLabel>
+          <RecoveredLabel>المتعافون</RecoveredLabel>
         </div>
         <div className="global-item">
           <Deaths> {renderState[2]}</Deaths>
-          <DeathsLabel>deaths</DeathsLabel>
+          <DeathsLabel>الوفيات</DeathsLabel>
         </div>
           <br></br><br></br>
-        <DivUpdate>{toUpdate}</DivUpdate>
+        <DivUpdate>آخر تحديث{toUpdate}</DivUpdate>
       </div>
     )
   }
