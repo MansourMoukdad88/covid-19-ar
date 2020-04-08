@@ -24,7 +24,7 @@ class App extends Component {
       <div className="app">
         <div className="container">
           <InstructionTicker/>
-          <h1 className="app-heading">Corona  <img src={logo} className="App-logo" alt="logo" />  كورونا</h1>
+          <h1 className="app-heading">Covid-19  <img src={logo} className="App-logo" alt="logo" />  كورونا</h1>
           <div style={{"textAlign":"center","margin":"10px 0 0 5px", "backgroundColor":"#5B86E5", "width": "100px", "borderRadius":"3px"}}>{today}</div>
           <h5 style={{"fontSize": "8px", "textAlign":"left", "marginLeft":"16px"}}>Made by <a href="http://codings.io">codings.io</a></h5>
           <Search/>
