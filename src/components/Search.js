@@ -19,7 +19,7 @@ class Search extends Component {
     fetch(`https://covid19.mathdro.id/api/countries/`)
     .then(response => response.json())
     .then(data => {
-      let arrayOfNames = [];
+      let arrayOfNames = ["اختر دولة"];
       data.countries.map((country) => {
         arrayOfNames.push(country.name);
       })
