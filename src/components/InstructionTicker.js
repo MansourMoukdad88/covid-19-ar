@@ -11,6 +11,8 @@ export default class InstructionTicker extends Component {
     fetch("https://newsapi.org/v2/top-headlines?country=ae&category=health&apiKey=f869bbb8172a4c53b25182b5fed0ca61")
     .then(response => response.json())
     .then(data => {
+      console.log(data);
+      
       let articleTitle = [];
       let articleURL =[]
       let articles = data.articles.forEach((article) => {

@@ -13,6 +13,18 @@ import Search from "./components/Search";
 import InstructionTicker from "./components/InstructionTicker";
 import Iraq from './Iraq';
 import Qatar from './Qatar';
+import BH from './BH';
+import OM from './OM';
+import YE from './YE';
+import SD from './SD';
+import LY from './LY';
+import TN from './TN';
+import DZ from './DZ';
+import MA from './MA';
+import MR from './MR';
+import SO from './SO';
+
+
 class App extends Component {
   
 
@@ -35,11 +47,23 @@ class App extends Component {
           <Kw/>
           <Sy/>
           <UAE/>
-          <KSA/>
           <LB/>
-          <EG/>
           <Iraq/>
+          <KSA/>
+          <EG/>
           <Qatar/>
+          <BH/>
+          <OM/>
+          <YE/>
+          <SD/>
+          <LY/>
+          <TN/>
+          <DZ/>
+          <MA/>
+          <MR/>
+          <SO/>
+      
+          
           <br></br>
           <h5 style={{"fontSize": "12px", "textAlign":"center"}}>Made by <a href="http://codings.io">codings.io</a>@ 2020</h5>
           <br></br>
