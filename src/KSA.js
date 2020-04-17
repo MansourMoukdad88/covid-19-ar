@@ -40,7 +40,6 @@ class KSA extends Component {
           <DeathsLabel>الوفيات</DeathsLabel>
         </div>
           <br></br><br></br>
-        <DivUpdate>آخر تحديث{toUpdate}</DivUpdate>
       </div>
     )
   }

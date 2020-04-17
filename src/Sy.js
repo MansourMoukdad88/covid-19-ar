@@ -38,7 +38,6 @@ class Sy extends Component {
         </div>
 
         <br></br><br></br>
-        <div style={{"fontSize":"12px", "color":"white"}}>آخر تحديث{ update && (<div> {new Date(update).toLocaleString()}</div>)}</div>
       </div>
     )
   }

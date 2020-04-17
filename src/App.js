@@ -11,6 +11,8 @@ import LB from "./LB";
 import Sy from "./Sy";
 import Search from "./components/Search";
 import InstructionTicker from "./components/InstructionTicker";
+import Iraq from './Iraq';
+import Qatar from './Qatar';
 class App extends Component {
   
 
@@ -25,8 +27,8 @@ class App extends Component {
         <div className="container">
           <InstructionTicker/>
           <h1 className="app-heading">Covid-19  <img src={logo} className="App-logo" alt="logo" />  كورونا</h1>
-          <div style={{"textAlign":"center","margin":"10px 0 0 5px", "backgroundColor":"#5B86E5", "width": "100px", "borderRadius":"3px"}}>{today}</div>
-          <h5 style={{"fontSize": "8px", "textAlign":"left", "marginLeft":"16px"}}>Made by <a href="http://codings.io">codings.io</a></h5>
+          <div style={{"textAlign":"center","margin":"4px 29px 6px 155px", "backgroundColor":"rgb(222, 229, 244)", "width": "100px", "borderRadius":"3px"}}>{today}</div>
+          <h5 style={{"fontSize": "8px", "textAlign":"center", "marginLeft":"-20px"}}>Made by <a href="http://codings.io">codings.io</a></h5>
           <Search/>
           <Global/>
           <Jo/>
@@ -36,10 +38,12 @@ class App extends Component {
           <KSA/>
           <LB/>
           <EG/>
+          <Iraq/>
+          <Qatar/>
           <br></br>
           <h5 style={{"fontSize": "12px", "textAlign":"center"}}>Made by <a href="http://codings.io">codings.io</a>@ 2020</h5>
           <br></br>
-          <p style={{"fontSize": "8px", "textAlign":"right"}}> Api by <a href="http://https://github.com/mathdroid/covid-19-api">mathdroid</a> </p>
+          <p style={{"fontSize": "8px", "textAlign":"center"}}> Api by <a href="http://https://github.com/mathdroid/covid-19-api">mathdroid</a> </p>
         </div>
       </div>
      

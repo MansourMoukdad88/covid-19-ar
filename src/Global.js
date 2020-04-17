@@ -29,19 +29,18 @@ class Global extends Component {
       <div className="entireData-items">
         <h1>جميع دول العالم</h1>
         <div className="global-item">
-          <Confirmed> {renderState[0]} </Confirmed>
+          <Confirmed style={{'fontSize':'25px'}}> {renderState[0]} </Confirmed>
           <ConfirmedLabel>المصابون</ConfirmedLabel>
         </div>
         <div className="global-item">
-          <Recovered> {renderState[1]}</Recovered>
+          <Recovered style={{'fontSize':'25px'}}> {renderState[1]}</Recovered>
           <RecoveredLabel>المتعافون</RecoveredLabel>
         </div>
         <div className="global-item">
-          <Deaths> {renderState[2]}</Deaths>
+          <Deaths style={{'fontSize':'25px'}}> {renderState[2]}</Deaths>
           <DeathsLabel>الوفيات</DeathsLabel>
         </div>
           <br></br><br></br>
-        <DivUpdate>آخر تحديث{toUpdate}</DivUpdate>
       </div>
     )
   }

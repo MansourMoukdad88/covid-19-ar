@@ -36,5 +36,5 @@ export const Label = styled.label`
 export const DivUpdate = styled.div`
   font-size: 12px;
   font-wight:bold;
-  color: white;
+  color: #374f90;
 `

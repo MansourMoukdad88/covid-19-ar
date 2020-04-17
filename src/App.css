@@ -58,18 +58,16 @@ body {
   min-height: 100vh; 
 }
 .container {
-  background: #36D1DC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #FFF;  /* fallback for old browsers */
+  color: #374f90;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   width: 430px;
-  padding: 3px 40px 30px 40px;
+  padding: 3px 0px 30px 0px;
   grid-template-columns: repeat(3, 1fr);
 }
 h1, h2 {
   text-align: center;
-  margin: 0 0 20px;
+  /* margin: 0 0 20px; */
 }
 .app-heading {
   margin: 40px 0 20px;
@@ -83,30 +81,36 @@ h1 {
   font-family: 'Prompt';
 }
 .entireData-items {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   padding-bottom: 20px;
   position: relative;
   display: grid;
 }
 .entireData-items {
+  color: #374f90;
   list-style: none;
   display: block;
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 3px 0px 7px 0px;
   font-size: 14px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   text-align: center;
   align-items: stretch;
+  background-color: #e7e7e7;
 
-  background: rgba(000, 000, 000,.1);  /* fallback for old browsers */  
+  /* background: rgba(000, 000, 000,.1);  fallback for old browsers   */
   -webkit-box-shadow: 2px 2px 10px -4px rgba(255,255,255,1);
   -moz-box-shadow: 2px 2px 10px -4px rgba(255,255,255,1);
   box-shadow: 2px 2px 5px -4px rgba(255,255,255,1);
 }
 .global-item {
+  width: 121px;
+  background-color: #FFF;
+  border-radius: 4px;
+  margin: 2px;
   display: inline-block;
-  padding: 0 10px;
+  padding: 2px 7px;
   text-align: center;
   font-size: 20px;
 }
@@ -114,7 +118,7 @@ h1 {
 /* Search */
 
 .select-item {
-  /* appearance: none; */
+  appearance: none;
   width: 100%;
   cursor: pointer;
   background-color: rgba(216, 48, 34);
